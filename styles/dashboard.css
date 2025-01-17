@@ -1,0 +1,90 @@
+/* IMPORTA CORES */
+@import url('cores.css');
+
+main{
+    background-color: var(--cor-de-fundo);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.conteudo{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.welcome{
+    background-color: white;
+    border-radius: 15px;
+    padding: 1% 2%;
+}
+.grafico_estoque{
+    background-color: white;
+    border-radius: 10px;
+    margin: 2% 0;
+    padding: 1% 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+}
+#produtoChart{
+    width: 450px;
+}
+/* MOVIMENTAÇÕES */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+.dashboard-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.dashboard{
+    background-color: white;
+    border-radius: 10px;
+    margin: 2% 0;
+    padding: 1% 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+}
+
+@media (max-width: 1048px) {
+    .conteudo{
+        flex-direction: column;
+        align-items: center;
+    }
+    #produtoChart{
+        width: 250px;
+        height: 300px;
+    }
+    .grafico_estoque{
+        width: 80%;
+        padding-top: 5%;
+    }
+    .dashboard{
+        width: 80%;
+        padding-top: 5%;
+    }
+    table{
+        width: 80%;
+    }
+}

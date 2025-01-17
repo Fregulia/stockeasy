@@ -1,0 +1,94 @@
+/* IMPORTA CORES */
+@import url('cores.css');
+
+body {
+    background-color: var(--cor-de-fundo);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 10% 0;
+}
+
+.marca__nome {
+    background-color: var(--cor-quaternaria);
+    padding: 2%;
+    border-radius: 20px;
+    margin-bottom: 2%;
+}
+.marca__nome a{
+    text-decoration: none;
+    font-size: xxx-large;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--cor-primaria);
+}
+
+.cadastro {
+    background-color: white;
+    padding: 1% 2% 2% 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 30px;
+    width: 40%;
+    text-align: center;
+}
+
+.dados{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5%;
+}
+#enviar {
+    margin-top: 1%;
+    margin-bottom: 10%;
+    padding: 1% 5%;
+}
+div input{
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    height: 35px;
+    margin: 2% 0 5% 0;
+    border: 1px solid gray;
+}
+.labels{
+    margin-top: 2%;
+}
+.label_login{
+    font-size: 20px;
+}
+#enviar{
+    margin-top: 10%;
+    width: 100%;
+    background-color: var(--cor-terciaria);
+    border: 1px solid var(--cor-primaria);
+    color: var(--cor-primaria);
+    padding: 5% 3%;
+    border-radius: 15px;
+    font-size: 20px;
+    transition: 0.4s
+}
+#enviar:hover{
+    background-color: black;
+    color: white;
+    border: none;
+}
+@media (max-width: 1048px) {
+    .cadastro{
+        width: 70%;
+    }
+    #senha, #confirmar_senha{
+        font-size: 20px;
+    }
+}

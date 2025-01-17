@@ -1,0 +1,125 @@
+/* IMPORTA CORES */
+@import url('cores.css');
+
+.conteudo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+    margin: 5% 0;
+    padding-bottom: 10%;
+}
+.produtos__cadastrados{
+    background-color: var(--cor-secundaria);
+    padding: 2% 5%;
+    border-radius: 10px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2%;
+}
+
+.cadastrar__produto{
+    margin-top: 2%;
+    background-color: var(--cor-secundaria);
+    padding: 2% 5%;
+    border-radius: 10px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5%;
+}
+.formulario__cadastro{
+    background-color: white;
+    padding: 5% 5%;
+    margin-top: 2%;
+    border-radius: 10px;
+    width: 90%;
+}
+.dados__produto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.titulo__dado{
+    background-color: var(--cor-secundaria);
+    width: 80%;
+    text-align: center;
+    padding: 2% 0;
+    border-radius: 10px;
+}
+.valor__dado{
+    width: 79%;
+    height: 30px;
+    border: none;               
+    border-bottom: 1px solid #000; 
+    outline: none;             
+    padding: 5px;               
+    font-size: 16px;
+    text-align: center;
+}
+#categoria_produto{
+    width: 79%;
+    height: 30px;              
+    outline: none;              
+    padding: 5px;               
+    font-size: 16px;
+    text-align: center;
+    margin: 1% 0 5% 0;
+}
+#enviar{
+    background-color: var(--cor-primaria);
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    padding: 1% 4%;
+    border-radius: 10px;
+}
+.tabela_produtos{
+    background-color: white;
+}
+
+/* Estilo geral da tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Estilo das células da tabela */
+th, td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid black;  /* Cor do borda */
+}
+
+/* Estilo do cabeçalho da tabela */
+th {
+    background-color: var(--cor-terciaria); /* Cor de fundo do cabeçalho */
+    color: white;  /* Cor do texto */
+    font-weight: bold; /* Negrito no texto */
+    text-align: center;
+
+}
+
+/* Estilo das linhas de dados */
+tr:nth-child(even) {
+    background-color: #f2f2f2;  /* Cor de fundo para linhas pares */
+}
+
+td{
+    background-color: white;
+}
+/* Estilo da tabela quando não houver resultados */
+table.empty {
+    text-align: center;
+    font-style: italic;
+    color: #888;
+    padding: 20px;
+}

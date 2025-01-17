@@ -1,0 +1,72 @@
+/* IMPORTA CORES */
+@import url('cores.css');
+
+main{
+    background-color: var(--cor-de-fundo);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.conteudo{
+    background-color: white;
+    border-radius: 10px;
+    margin: 2% 0;
+    padding: 1% 5%;
+    width: 60%;
+}
+.welcome{
+    background-color: white;
+    border-radius: 15px;
+    padding: 1% 5%;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+form label{
+    background-color: var(--cor-secundaria);
+    width: 80%;
+    text-align: center;
+    padding: 2% 0;
+    border-radius: 10px;
+}
+form input{
+    width: 79%;
+    height: 30px;
+    border: none;               
+    border-bottom: 1px solid #000; 
+    outline: none;             
+    padding: 5px;               
+    font-size: 16px;
+    text-align: center;
+    margin: 0 0 2% 0;
+    font-size: 16px;
+}
+form select{
+    width: 79%;
+    height: 30px;              
+    outline: none;              
+    padding: 5px;               
+    font-size: 16px;
+    text-align: center;
+    margin: 1% 0 2% 0;
+    font-size: 16px;
+}
+.form_movimentacoes{
+    background-color: white;
+    padding: 5% 5%;
+    margin-top: 2%;
+    border-radius: 10px;
+    width: 90%;
+}
+@media (max-width: 1048px) {
+    form label{
+        margin-top: 10%;
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+    form button{
+        margin-top: 10%;
+    }
+}

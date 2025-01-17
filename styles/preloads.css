@@ -1,0 +1,116 @@
+/* IMPORTA CORES */
+@import url('cores.css');
+
+*{
+    margin: 0;
+}
+
+header{
+    padding: 1% 1%;
+    background-color: var(--cor-de-fundo);
+}
+
+.container__header{
+    padding: 3% 5%;
+    background-color: var(--cor-terciaria);
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.marca{
+    font-size: xxx-large;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--cor-primaria);
+    text-decoration: none;
+}
+
+.nav__cabecalho{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.botoes__nav ul{
+    list-style: none;
+    display: flex;
+}
+
+.botoes__nav li {
+    margin-left: 15px;
+}
+
+.botoes__nav a {
+    font-size: larger;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--cor-primaria);
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.botoes__nav a:hover {
+    background-color: white;
+    color: black;
+}
+#img_perfil {
+    border-radius: 50%;  /* Arredonda a imagem para um círculo */
+    width: 75px;         /* Garante que a largura da imagem seja 75px */
+    height: 75px;        /* Garante que a altura da imagem seja 75px */
+    object-fit: cover;   /* Garante que a imagem se ajuste dentro da área circular */
+}
+
+footer{
+    background-color: var(--cor-terciaria);
+    display: flex;
+    padding: 1% 1%;
+    justify-content: center;
+    color: white;
+}
+
+/* Estilo base do menu */
+.nav__cabecalho .botoes__nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    transition: all 0.3s ease-in-out; /* Transição suave */
+}
+
+.nav__cabecalho .botoes__nav ul li {
+    padding: 10px;
+}
+
+.nav__cabecalho .botoes__nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+@media (max-width: 1048px) {
+    .nav__cabecalho{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .botoes__nav ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .botoes__nav li {
+        margin-left: 0;
+    }
+    header{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    .container__header{
+        width: 85%;
+        text-align: center;
+    }
+}

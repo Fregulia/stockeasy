@@ -1,0 +1,8 @@
+/* DEFINE A PALETA DE CORES PRA SER USADA NOS DEMAIS ARQUIVOS CSS */
+:root {
+    --cor-primaria: #50FFB1;
+    --cor-secundaria: #4FB286;
+    --cor-de-fundo: #284235;
+    --cor-terciaria: #3C896D;
+    --cor-quaternaria: #546D64;
+}

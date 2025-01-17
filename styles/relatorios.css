@@ -1,0 +1,41 @@
+/* IMPORTA CORES */
+@import url('cores.css');
+
+.conteudo{
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 2%;
+    padding: 2% 5%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.formulario_relatorio form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10%;
+    margin-bottom: 40%;
+}
+.resultados{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+.resultados .titulo_resultados{
+    background-color: var(--cor-terciaria);
+    padding: 1% 4%;
+    margin-bottom: 2%;
+    border-radius: 15px;
+}
+.resultados .tabela_resultados{
+    background-color: var(--cor-secundaria);
+    padding: 2% 5%;
+    text-align: center;
+    border-radius: 15px;
+}
+.cabecalho_tabela{
+    margin-bottom: 20%;
+}
