@@ -78,18 +78,18 @@ $conn->close();
 <html lang="pt-br">
 
 <head>
-  <meta charset="UTF-8"> 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <title>Perfil</title> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil</title>
 
-  <link rel="stylesheet" href="../styles/preloads.css"> 
-  <link rel="stylesheet" href="../styles/profile.css"> 
-  <script src="../scripts/preload.js" defer></script> 
+  <link rel="stylesheet" href="../styles/preloads.css">
+  <link rel="stylesheet" href="../styles/profile.css">
+  <script src="../scripts/preload.js" defer></script>
 </head>
 
 <body>
   <!-- CABEÇALHO -->
-  <header id="header-container"></header> 
+  <header id="header-container"></header>
 
   <main>
     <div class="welcome">
@@ -103,7 +103,7 @@ $conn->close();
         <form id="uploadForm" enctype="multipart/form-data" method="POST" action="upload.php">
           <label for="profilePic">Selecione sua foto de perfil</label><br> <!-- RÓTULO PARA SELEÇÃO DE FOTO -->
           <input type="file" id="profilePic" name="profilePic" accept="image/*" required><br> <!-- CAMPO DE SELEÇÃO DE FOTO -->
-          <button type="submit">Enviar</button> <!-- BOTÃO DE ENVIO -->
+          <button class="botoes_1" type="submit">Enviar</button> <!-- BOTÃO DE ENVIO -->
         </form>
       </div>
 
@@ -117,7 +117,18 @@ $conn->close();
           <label for="email">E-mail</label><br> <!-- RÓTULO PARA O CAMPO E-MAIL -->
           <input type="email" id="email" name="email" value="<?php echo htmlspecialchars($email); ?>"><br><br> <!-- CAMPO DE E-MAIL -->
 
-          <input type="submit" value="Atualizar"> <!-- BOTÃO DE SUBMISSÃO DO FORMULÁRIO -->
+          <input class="botoes_1" type="submit" value="Atualizar"> <!-- BOTÃO DE SUBMISSÃO DO FORMULÁRIO -->
+        </form>
+      </div>
+
+      <div class="excluir_conta">
+        <h2>Excluir Conta</h2> <!-- TÍTULO DA SEÇÃO DE EXCLUSÃO DE CONTA -->
+
+        <form method="POST" action="apaga_conta.php"> <!-- FORMULÁRIO DE EXCLUSÃO -->
+          <p>Deseja realmente excluir sua conta? Esta ação não pode ser desfeita.</p> <!-- MENSAGEM DE CONFIRMAÇÃO -->
+          <button id="excluir" type="submit" onclick="return confirm('Tem certeza que deseja excluir sua conta?');">
+            Excluir Conta
+          </button> <!-- BOTÃO DE EXCLUSÃO -->
         </form>
       </div>
     </div>

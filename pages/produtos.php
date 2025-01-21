@@ -108,7 +108,7 @@ $result = $stmt->get_result(); // OBTÉM O RESULTADO DA CONSULTA
           // VERIFICA SE EXISTEM PRODUTOS CADASTRADOS PARA O USUÁRIO
           if ($result->num_rows > 0) {
             echo "<table>"; // INÍCIO DA TABELA
-            echo "<tr><th>ID</th><th>Nome</th><th>Descrição</th><th>Preço</th><th>Quantidade</th><th>Categoria</th><th>Ações</th></tr>";
+            echo "<tr><th>ID</th><th>Nome</th><th>Descrição</th><th>Preço</th><th>Quantidade</th><th>Categoria</th><th id='acao-coluna'>Ações</th></tr>";
 
             // ITERA SOBRE OS RESULTADOS E EXIBE OS PRODUTOS
             while ($row = $result->fetch_assoc()) {
@@ -133,14 +133,20 @@ $result = $stmt->get_result(); // OBTÉM O RESULTADO DA CONSULTA
 
               // EXIBE OS DADOS DO PRODUTO NA TABELA
               echo "<tr>
-                <td>" . $row['id'] . "</td>
-                <td>" . $row['nome'] . "</td>
-                <td>" . $row['descricao'] . "</td>
-                <td>" . $row['preco'] . "</td>
-                <td>" . $row['quantidade'] . "</td>
-                <td>" . $categoria . "</td>
-                <td><a href='deletar_produto.php?id=" . $row['id'] . "'>Excluir</a></td>
-              </tr>";
+                      <td>" . $row['id'] . "</td>
+                      <td>" . $row['nome'] . "</td>
+                      <td>" . $row['descricao'] . "</td>
+                      <td>" . $row['preco'] . "</td>
+                      <td>" . $row['quantidade'] . "</td>
+                      <td>" . $categoria . "</td>
+                      <td>";
+              // Verifica se o ID da sessão é igual a 2
+              if ($id == 2) {
+                echo "<a class='botoes_produto' href='editar_produto.php?id=" . $row['id'] . "'>Editar</a> <br>";
+              }
+              echo "<a class='botoes_produto' href='deletar_produto.php?id=" . $row['id'] . "'>Excluir</a>
+                      </td>
+                    </tr>";
             }
             echo "</table>"; // FIM DA TABELA
           } else {
@@ -149,48 +155,49 @@ $result = $stmt->get_result(); // OBTÉM O RESULTADO DA CONSULTA
           ?>
         </div>
 
-        <div class="cadastrar__produto">
-          <h2>Cadastrar Novo Produto</h2>
 
-          <div class="formulario__cadastro">
-            <form method="POST">
-              <div class="dados__produto">
-                <label class="titulo__dado">
-                  <h3>Nome do Produto</h3>
-                </label>
-                <input class="valor__dado" type="text" name="nome" required><br>
+      </div>
+      <div class="cadastrar__produto">
+        <h2>Cadastrar Novo Produto</h2>
 
-                <label class="titulo__dado">
-                  <h3>Descrição do Produto</h3>
-                </label>
-                <input class="valor__dado" type="text" name="descricao" required><br>
+        <div class="formulario__cadastro">
+          <form method="POST">
+            <div class="dados__produto">
+              <label class="titulo__dado">
+                <h3>Nome do Produto</h3>
+              </label>
+              <input class="valor__dado" type="text" name="nome" required><br>
 
-                <label class="titulo__dado">
-                  <h3>Preço do Produto (R$)</h3>
-                </label>
-                <input class="valor__dado" type="number" name="preco" required><br>
+              <label class="titulo__dado">
+                <h3>Descrição do Produto</h3>
+              </label>
+              <input class="valor__dado" type="text" name="descricao" required><br>
 
-                <label class="titulo__dado">
-                  <h3>Quantidade</h3>
-                </label>
-                <input class="valor__dado" type="number" name="qtd" required><br>
+              <label class="titulo__dado">
+                <h3>Preço do Produto (R$)</h3>
+              </label>
+              <input class="valor__dado" type="number" name="preco" required><br>
 
-                <label class="titulo__dado" for="opcao">
-                  <h3>Categoria</h3>
-                </label>
-                <select id="categoria_produto" name="categoria">
-                  <option value="opcao1">Eletrônicos</option>
-                  <option value="opcao2">Eletrodomésticos</option>
-                  <option value="opcao3">Alimentos</option>
-                  <option value="opcao4">Materiais de Construção</option>
-                </select>
+              <label class="titulo__dado">
+                <h3>Quantidade</h3>
+              </label>
+              <input class="valor__dado" type="number" name="qtd" required><br>
 
-                <button id="enviar" type="submit">
-                  <h3>Cadastrar</h3>
-                </button>
-              </div>
-            </form>
-          </div>
+              <label class="titulo__dado" for="opcao">
+                <h3>Categoria</h3>
+              </label>
+              <select id="categoria_produto" name="categoria">
+                <option value="opcao1">Eletrônicos</option>
+                <option value="opcao2">Eletrodomésticos</option>
+                <option value="opcao3">Alimentos</option>
+                <option value="opcao4">Materiais de Construção</option>
+              </select>
+
+              <button id="enviar" type="submit">
+                <h3>Cadastrar</h3>
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </div>

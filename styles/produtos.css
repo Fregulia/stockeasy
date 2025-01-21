@@ -23,7 +23,7 @@
 }
 
 .cadastrar__produto{
-    margin-top: 2%;
+    margin-top: 5%;
     background-color: var(--cor-secundaria);
     padding: 2% 5%;
     border-radius: 10px;
@@ -83,11 +83,22 @@
 }
 .tabela_produtos{
     background-color: white;
+    width: 100%;
+}
+
+.botoes_produto{
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+
+.botoes_produto:hover{
+    text-decoration: underline;
 }
 
 /* Estilo geral da tabela */
 table {
-    width: 100%;
+    width: auto;
     border-collapse: collapse;
     margin-top: 20px;
 }

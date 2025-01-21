@@ -7,6 +7,7 @@ $db   = 'Stock_db';   // NOME DO BANCO DE DADOS
 
 // CRIA A CONEXÃO COM O BANCO DE DADOS USANDO O MYSQLI
 $conn = new mysqli($host, $user, $pass, $db);
+$conexao = new mysqli($host, $user, $pass, $db);
 
 // VERIFICA SE HOUVE ERRO NA CONEXÃO
 if ($conn->connect_error) {

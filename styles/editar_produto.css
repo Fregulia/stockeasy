@@ -1,0 +1,73 @@
+/* IMPORTA CORES */
+@import url('cores.css');
+
+main{
+    background-color: var(--cor-de-fundo);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.welcome{
+    background-color: white;
+    border-radius: 15px;
+    padding: 1% 5%;
+}
+
+.conteudo{
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 2%;
+    padding: 1% 5%;
+    width: 60%;
+    margin-bottom: 3%;
+}
+
+.titulo_formulario{
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.formulario form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+form input, form textarea{
+    width: 90%;
+    height: 30px;
+    border: none;               
+    border-bottom: 1px solid #000; 
+    outline: none;             
+    padding: 5px;               
+    font-size: 16px;
+    text-align: center;
+}
+
+textarea {
+    resize: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+form label{
+    background-color: var(--cor-secundaria);
+    padding: 2% 5%;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-bottom: 1%;
+    width: 85%;
+    text-align: center;
+}
+button{
+    background-color: var(--cor-primaria);
+    padding: 1% 4%;
+    border: none;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.3s;
+}
+button:hover{
+    background-color: black;
+    color: white;
+}
